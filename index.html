@@ -60,6 +60,17 @@
 				height: 16vw;
 			}
 		}
+		.fade-in {
+			opacity: 0;
+			transform: translateY(20px);
+			animation: fadeIn 1s ease-out forwards;
+		}
+		@keyframes fadeIn {
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
         .twi {
             transition: opacity 0.3s cubic-bezier(.4,0,.2,1);
             display: inline-block;
@@ -71,6 +82,6 @@
 </head>
 <body>
 	<div class="glow"></div>
-	<h1><span class="twi">This web is... </span><span class="off"> OFF!</span></h1>
+	<h1 class="fade-in"><span class="twi">This web is... </span><span class="off"> OFF!</span></h1>
 </body>
 </html>
